@@ -197,9 +197,9 @@ if authentication_status:
                            "Subject_HomWork_Grad":subject_home_work,
                            "Subject_Exam_Grad":subject_exam,
                            "Subject_Contribution":subject_Contribution})
-#             st.write("## Show Subject Dataset")
-#             st.write(df_subjects)
-#             st.write(df_subjects.shape)
+            st.write("## Show Subject Dataset")
+            st.write(df_subjects)
+            st.write(df_subjects.shape)
             
         
             
