@@ -172,10 +172,10 @@ if authentication_status:
         df_subjects = pd.DataFrame(file7)  
         file7.close()
         
-        subject_id = st.sidebar.text_input         ("Subject ID")
-        subject_name = st.sidebar.text_input       ("Subject Name")
-        subject_date_time = st.sidebar.text_input  ("Subject Date Time")
-        subject_Att_Grad = st.sidebar.text_input   ("Subject Attendance Grad")
+        subject_id = st.sidebar.text_input("Subject ID")
+        subject_name = st.sidebar.text_input("Subject Name")
+        subject_date_time = st.sidebar.text_input("Subject Date Time")
+        subject_Att_Grad = st.sidebar.text_input("Subject Attendance Grad")
         subject_home_work   = st.sidebar.text_input("Subject Home Work Grad")
         subject_exam    = st.sidebar.text_input("Subject Exam Grad")
         subject_Contribution = st.sidebar.text_input("Subject Contribution")
@@ -188,11 +188,11 @@ if authentication_status:
         df_sunbjects = pd.DataFrame(get_data_subject())
         
         if st.sidebar.button("Add Subject"):
-            get_data_subject().append({"Subject_ID": subject_id, 
-                           "Subject_Name":           subject_name, 
-                           "Subject_Date_Time":          subject_date_time,
-                           "Subject_Attendance_Grad":     subject_Att_Grad,
-                           "Subject_HomWork_Grad":        subject_home_work,
+            get_data_subject().append({"Subject_ID":subject_id, 
+                           "Subject_Name":subject_name, 
+                           "Subject_Date_Time":subject_date_time,
+                           "Subject_Attendance_Grad":subject_Att_Grad,
+                           "Subject_HomWork_Grad":subject_home_work,
                            "Subject_Exam_Grad":subject_exam,
                            "Subject_Contribution":subject_Contribution})
             st.write("## Show Teacher Dataset")
