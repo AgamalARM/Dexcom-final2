@@ -168,9 +168,9 @@ if authentication_status:
        
    ############################# add subjectfile 7,8#######################################################
     elif select_item == "Add Subject":      ### add subject
-        file1 = open(subject_csv)
-        df_subjects = pd.DataFrame(file1)  
-        file1.close()
+        file7 = open(subject_csv)
+        df_subjects = pd.DataFrame(file7)  
+        file7.close()
         
         subject_id = st.sidebar.text_input         ("Subject ID")
         subject_name = st.sidebar.text_input       ("Subject Name")
@@ -189,10 +189,10 @@ if authentication_status:
         
         if st.sidebar.button("Add Subject"):
             get_data_subject().append({"Subject_ID": subject_id, 
-                           "Subject_Name": subject_name, 
-                           "Subject_Date_Time":subject_date_time,
-                           "Subject_Attendance_Grad":subject_Att_Grad,
-                           "Subject_HomWork_Grad":subject_home_work,
+                           "Subject_Name":           subject_name, 
+                           "Subject_Date_Time":          subject_date_time,
+                           "Subject_Attendance_Grad":     subject_Att_Grad,
+                           "Subject_HomWork_Grad":        subject_home_work,
                            "Subject_Exam_Grad":subject_exam,
                            "Subject_Contribution":subject_Contribution})
             st.write("## Show Teacher Dataset")
@@ -212,9 +212,9 @@ if authentication_status:
         csv1 = convert_df(df_subjects)
         #st.write(csv1)
         
-        file2 = open(subject_csv)
+        file8 = open(subject_csv)
         df_subjects.to_csv (r'subject_data.csv', index = False, header=True)
-        file2.close()
+        file8.close()
 ##########################################################################################
 elif authentication_status == False:
     st.error('Username/password is incorrect')
