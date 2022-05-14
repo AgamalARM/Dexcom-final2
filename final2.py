@@ -50,11 +50,12 @@ if authentication_status:
             get_data_admin().append({"Admin_ID": admin_id, 
                            "Admin_Name": admin_name, 
                            "Admin_Phone": admin_phone})
-            st.write("## Show Admin Dataset")
-            st.write(df_admins)
-            st.write(df_admins.shape)
+#             st.write("## Show Admin Dataset")
+#             st.write(df_admins)
+#             st.write(df_admins.shape)
             
         if st.button("Show Dataset") :
+            st.write("## Show Admin Dataset")
             st.write(df_admins)
         
             
@@ -97,11 +98,12 @@ if authentication_status:
                            "Teacher_Phone": teacher_phone,
                            "Teacher_Class_Name":teacher_Class_Name,
                            "Teacher_Subject":teacher_Subject})
-            st.write("## Show Teacher Dataset")
-            st.write(df_teachers)
-            st.write(df_teachers.shape)
+#             st.write("## Show Teacher Dataset")
+#             st.write(df_teachers)
+#             st.write(df_teachers.shape)
             
         if st.button("Show Dataset") :
+            st.write("## Show Teacher Dataset")
             st.write(df_teachers)
             
         
@@ -144,11 +146,12 @@ if authentication_status:
                            "Student_Email": student_email,
                            "Student_Class_Name": student_class_name,
                            "Student_Subject": student_subject})
-            st.write("## Show Student Dataset")
-            st.write(df_students)
-            st.write(df_students.shape) 
+#             st.write("## Show Student Dataset")
+#             st.write(df_students)
+#             st.write(df_students.shape) 
             
         if st.button("Show Dataset") :
+            st.write("## Show Student Dataset")
             st.write(df_students)
             
             
