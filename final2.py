@@ -176,8 +176,8 @@ if authentication_status:
         subject_name = st.sidebar.text_input("Subject Name")
         subject_date_time = st.sidebar.text_input("Subject Date Time")
         subject_Att_Grad = st.sidebar.text_input("Subject Attendance Grad")
-        subject_home_work   = st.sidebar.text_input("Subject Home Work Grad")
-        subject_exam    = st.sidebar.text_input("Subject Exam Grad")
+        subject_home_work = st.sidebar.text_input("Subject Home Work Grad")
+        subject_exam = st.sidebar.text_input("Subject Exam Grad")
         subject_Contribution = st.sidebar.text_input("Subject Contribution")
         
         @st.cache(allow_output_mutation=True)
@@ -186,6 +186,7 @@ if authentication_status:
             
         
         df_sunbjects = pd.DataFrame(get_data_subject())
+        st.write(df_sunbjects)
         
         if st.sidebar.button("Add Subject"):
             get_data_subject().append({"Subject_ID":subject_id, 
@@ -195,7 +196,7 @@ if authentication_status:
                            "Subject_HomWork_Grad":subject_home_work,
                            "Subject_Exam_Grad":subject_exam,
                            "Subject_Contribution":subject_Contribution})
-            st.write("## Show Teacher Dataset")
+            st.write("## Show Subject Dataset")
             st.write(df_subjects)
             st.write(df_subjects.shape)
             
